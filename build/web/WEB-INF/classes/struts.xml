@@ -1,0 +1,83 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <result-types>
+            <result-type name="tiles"
+ class="org.apache.struts2.views.tiles.TilesResult" />
+        </result-types> 
+         
+        <action name="adding" class="hp.adding">
+            <result name="success">index.jsp</result>
+        </action>
+        
+        <action name="check" class="hp.check">
+            <result name="success">Profile.jsp</result>
+            <result name="fail">newuser.jsp</result>
+        </action>
+        
+        <action name="passw" class="hp.passw">
+            <result name="success">index.jsp</result>
+            <result name="fail">forgot.jsp</result>
+        </action>
+         
+        <action name="drafts" class="hp.drafts">
+            <result name="draft" type="tiles">/admin4</result>
+        </action>
+         
+        <action name="sent" class="hp.sent">
+            <result name="sent" type="tiles">/admin3</result>
+        </action>
+        
+        <action name="inb" class="hp.inb">
+            <result name="inbox" type="tiles">/admin2</result>
+        </action>
+        
+        <action name="compose" class="hp.compose">
+            <result name="send" type="tiles">/admin1</result>
+        </action>
+                
+        <action name="edit" class="hp.edit">
+            <result name="edit" type="tiles">/admin7</result>
+        </action>
+        
+        <action name="pro" class="hp.pro">
+            <result name="success" type="tiles">/admin7</result>
+        </action>
+     
+        <action name="pass"  class="hp.pass">
+            <result name="result" type="tiles" >/admin6</result>
+        </action>
+        
+        <action name="log" class="hp.Login">
+            <result name="success" type="tiles">/admin</result>
+            <result name="fail">index.jsp</result>
+        </action> 
+        
+        <action name="admin1">
+            <result type="tiles">/admin1</result>
+        </action>
+        <action name="admin2">
+            <result type="tiles">/admin2</result>
+        </action>
+        <action name="admin3">
+            <result type="tiles">/admin3</result>
+        </action>
+        <action name="admin4">
+            <result type="tiles">/admin4</result>
+        </action>
+        <action name="admin5">
+            <result type="tiles">/admin5</result>
+        </action>
+        <action name="admin6">
+            <result type="tiles">/admin6</result>
+        </action>
+        <action name="admin7">
+            <result type="tiles">/admin7</result>
+        </action>
+       
+    </package>
+</struts>
